@@ -8,8 +8,8 @@ public enum MenuPrincipal {
     ELIMINAR_PRODUCTO(4),
     CREAR_PEDIDO(5),
     LISTAR_PEDIDOS(6),
-    SALIR(7),
-    NO_NULL(8);
+    VER_OPCIONES(7),
+    SALIR(8);
 
     private final int opcion;
 
@@ -29,6 +29,6 @@ public enum MenuPrincipal {
 
             if (menuPrincipal.opcion == opcionDelUsuario) return menuPrincipal;
         }
-        throw new IllegalArgumentException();
+        throw new IllegalArgumentException("El número ingresado no coincide con alguna opción válida del menú.");
     }
 }
