@@ -1,58 +1,20 @@
 package com.lab.productos;
 
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
+import java.util.Optional;
+import java.util.Set;
 
-public class ProductoServicio {
-    private static final Map<String, Producto> productos = new HashMap<>();
-    private static  Scanner sc;
+public interface ProductoServicio {
 
-    public static boolean crearProducto() {
-        sc.nextLine();
-        System.out.println("ingrese el nombre del producto: ");
-        String nombre = sc.nextLine().trim().toLowerCase();
-        if (productos.containsKey(nombre)) return false;
+    boolean existeProducto(String nombre);
 
-        System.out.println("ingrese el precio del producto: ");
-        double precio = sc.nextDouble();
-        if (precio <= 0) throw new IllegalArgumentException("El precio no puede ser menor o igual a 0");
+    boolean crearProducto(String nombre, double precio, int stock);
 
-        System.out.println("ingrese el stock del producto: ");
-        int stock = sc.nextInt();
-        if (stock < 0) throw new IllegalArgumentException("El stock no puede ser menor que 0");
+    Map<String,Producto> listarProductos();
 
-        Producto producto = new ProductoBasico(nombre, precio, stock);
-        productos.put(nombre, producto);
+    boolean eliminarProducto(String nombre);
 
-        return true;
-    }
+    Producto obtenerProducto(String nombre);
 
-    public static void listarProductos() {
-        if (productos.isEmpty()) System.out.println("No existen productos");
-        productos.forEach((key, value) -> System.out.println(key + ": " + value));
-    }
-
-    public static boolean eliminarProducto() {
-        sc.nextLine();
-        System.out.println("Nombre del producto: ");
-        String nombre = sc.nextLine();
-        return productos.remove(nombre, productos.get(nombre));
-    }
-
-    public static void buscarProducto() {
-        sc.nextLine();
-        System.out.println("Nombre del producto: ");
-        String nombre = sc.nextLine();
-        if (productos.containsKey(nombre)) {
-            productos.forEach((key, producto) -> System.out.println(key + ": " + producto));
-        }else {
-            System.out.println("No existe "+nombre+" en el registro");
-        }
-    }
-
-
-    public static void setScanner(Scanner sc){
-        ProductoServicio.sc = sc;
-    }
+    Producto modificarProducto(Producto producto,double precio, int stock);
 }

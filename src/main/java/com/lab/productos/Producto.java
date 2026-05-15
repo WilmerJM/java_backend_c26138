@@ -7,9 +7,10 @@ public abstract class Producto {
     private final String nombre;
     private Double precio;
     private Integer stock;
+    private static int ID = 0;
 
-    public Producto(String id,String nombre, Double precio, Integer stock) {
-        this.id = id;
+    public Producto(String nombre, Double precio, Integer stock) {
+        this.id = String.valueOf(++ID);
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
@@ -50,4 +51,5 @@ public abstract class Producto {
                 ", stock=" + stock +
                 '}';
     }
+
 }
