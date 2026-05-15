@@ -1,6 +1,4 @@
-package com.lab.productos;
-
-import java.util.UUID;
+package com.lab.dominio.productos;
 
 public class ProductoBasico extends Producto{
 

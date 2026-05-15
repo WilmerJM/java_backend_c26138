@@ -2,10 +2,10 @@ package com.lab;
 
 import com.lab.excepciones.StockInsuficienteException;
 import com.lab.menuprincipal.OpcionMenuPrincipal;
-import com.lab.pedidos.Pedido;
-import com.lab.pedidos.PedidoServicioImpl;
-import com.lab.productos.Producto;
-import com.lab.productos.ProductoServicioImpl;
+import com.lab.dominio.pedidos.Pedido;
+import com.lab.servicios.PedidoServicioImpl;
+import com.lab.dominio.productos.Producto;
+import com.lab.servicios.ProductoServicioImpl;
 
 import java.util.HashMap;
 import java.util.Map;

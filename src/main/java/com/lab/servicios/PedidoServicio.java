@@ -1,6 +1,7 @@
-package com.lab.pedidos;
+package com.lab.servicios;
 
-import com.lab.productos.Producto;
+import com.lab.dominio.pedidos.Pedido;
+import com.lab.dominio.productos.Producto;
 
 import java.util.Map;
 

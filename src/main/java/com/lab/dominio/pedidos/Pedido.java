@@ -1,6 +1,6 @@
-package com.lab.pedidos;
+package com.lab.dominio.pedidos;
 
-import com.lab.productos.Producto;
+import com.lab.dominio.productos.Producto;
 
 import java.time.LocalDate;
 import java.util.Collections;

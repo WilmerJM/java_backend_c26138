@@ -1,4 +1,6 @@
-package com.lab.productos;
+package com.lab.repositorios;
+
+import com.lab.dominio.productos.Producto;
 
 import java.util.HashMap;
 import java.util.Map;

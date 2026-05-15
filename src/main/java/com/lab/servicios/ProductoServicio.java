@@ -1,8 +1,8 @@
-package com.lab.productos;
+package com.lab.servicios;
+
+import com.lab.dominio.productos.Producto;
 
 import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
 
 public interface ProductoServicio {
 
@@ -10,7 +10,7 @@ public interface ProductoServicio {
 
     boolean crearProducto(String nombre, double precio, int stock);
 
-    Map<String,Producto> listarProductos();
+    Map<String, Producto> listarProductos();
 
     boolean eliminarProducto(String nombre);
 

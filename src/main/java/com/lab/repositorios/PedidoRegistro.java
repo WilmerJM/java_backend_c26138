@@ -1,4 +1,6 @@
-package com.lab.pedidos;
+package com.lab.repositorios;
+
+import com.lab.dominio.pedidos.Pedido;
 
 import java.util.HashMap;
 import java.util.Map;

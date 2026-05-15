@@ -1,4 +1,8 @@
-package com.lab.productos;
+package com.lab.servicios;
+
+import com.lab.dominio.productos.Producto;
+import com.lab.dominio.productos.ProductoBasico;
+import com.lab.repositorios.ProductoRegistro;
 
 import java.util.Map;
 import java.util.NoSuchElementException;

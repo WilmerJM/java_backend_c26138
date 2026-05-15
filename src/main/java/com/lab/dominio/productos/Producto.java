@@ -1,6 +1,4 @@
-package com.lab.productos;
-
-import java.util.Objects;
+package com.lab.dominio.productos;
 
 public abstract class Producto {
     private final String id;
